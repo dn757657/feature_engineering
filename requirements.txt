@@ -1,3 +1,2 @@
 pandas~=2.0.3
 featurewiz~=0.3.2
-#TA-Lib~=0.4.19 doesnt work right now? maybe a python version thing

@@ -3,6 +3,7 @@ from pandas import DataFrame, Series
 from darts import TimeSeries
 
 # use this to go back from darts timeseries: df = series.pd_dataframe()
+# TODO move this shit to the modelling library under darts
 
 
 def df_to_timeseries(

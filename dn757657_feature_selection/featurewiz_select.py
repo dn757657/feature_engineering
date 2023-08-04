@@ -3,10 +3,11 @@ from typing import Union
 from pandas import DataFrame, Series
 
 
-def df_featwizfeatures(x_train: Union[DataFrame, Series],
-                       y_train: Union[DataFrame, Series],
-                       x_test: Union[DataFrame, Series]
-                       ):
+def featurewiz_select(
+        x_train: Union[DataFrame, Series],
+        y_train: Union[DataFrame, Series],
+        x_test: Union[DataFrame, Series]
+):
     """
     for some reason putting anything in feature_end arg breaks this
     despite this being the indicated usage in the documentaiton
@@ -15,6 +16,7 @@ def df_featwizfeatures(x_train: Union[DataFrame, Series],
     :param x_test:
     :return:
     """
+
     fwiz = FeatureWiz(
         corr_limit=0.70,
         feature_engg='',

@@ -28,7 +28,8 @@ def split_to_darts_timeseries(
         x_train: DataFrame,
         x_test: DataFrame,
         y_train: Union[DataFrame, Series],
-        y_test: Union[DataFrame, Series]
+        y_test: Union[DataFrame, Series],
+        target_column: str
 ):
     """
     convert typical split dataset to darts suitable input
@@ -39,7 +40,7 @@ def split_to_darts_timeseries(
     :return:
     """
 
-    darts_train = df_to_timeseries(x_train, y_train, 'target_column_name')
-    darts_test = df_to_timeseries(x_test, y_test, 'target_column_name')
+    darts_train = df_to_timeseries(x_train, y_train, target_column)
+    darts_test = df_to_timeseries(x_test, y_test, target_column)
 
     return darts_train, darts_test

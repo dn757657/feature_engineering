@@ -15,6 +15,6 @@ def df_add_forwarddiff_col(df, column_name):
     difference = df[column_name] - shifted_column
 
     # Add the difference column to the DataFrame
-    df[column_name + '_forwarddiff'] = difference
+    df[column_name + '_forwarddiff'] = difference * -1
 
     return df

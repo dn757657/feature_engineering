@@ -1,5 +1,6 @@
 from pandas import DataFrame
 
+# TODO also move this to modelling library?
 
 def temporal_train_test_split(
         df: DataFrame,

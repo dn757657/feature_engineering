@@ -3,7 +3,7 @@ from typing import Union
 from pandas import DataFrame, Series
 
 
-def featurewiz_select(
+def featurewiz_select_features(
         x_train: Union[DataFrame, Series],
         y_train: Union[DataFrame, Series],
         x_test: Union[DataFrame, Series]

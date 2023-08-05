@@ -20,7 +20,7 @@ def df_to_timeseries(
     """
     df = X.copy()
     df[value_col_name] = y
-    series = TimeSeries.from_dataframe(df, time_col=df.index.name, value_cols=[value_col_name])
+    series = TimeSeries.from_dataframe(df, value_cols=[value_col_name])
     return series
 
 

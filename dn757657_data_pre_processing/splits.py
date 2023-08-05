@@ -47,6 +47,7 @@ def pandf_temporal_train_test_split(
     test_df = df[target_column].iloc[split_index:]
 
     train_df.sort_index(inplace=True, ascending=False)
+    test_df.sort_index(inplace=True, ascending=False)
 
     return train_df, test_df
 

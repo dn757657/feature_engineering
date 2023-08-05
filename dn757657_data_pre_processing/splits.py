@@ -29,7 +29,6 @@ def temporal_train_test_split(
 
 def pandf_temporal_train_test_split(
         df: DataFrame,
-        target_column: str,
         train_fraction: float = 0.8
 ):
     """
@@ -39,12 +38,14 @@ def pandf_temporal_train_test_split(
     :param train_fraction: fraction of data to use as training data
     :return:
     """
+    df.sort_index(inplace=True, ascending=True)
+
     # Calculate the index at which to split
     split_index = int(len(df) * train_fraction)
 
     # Split the data
     train_df = df.iloc[:split_index]
-    test_df = df[target_column].iloc[split_index:]
+    test_df = df.iloc[split_index:]
 
     train_df.sort_index(inplace=True, ascending=False)
     test_df.sort_index(inplace=True, ascending=False)

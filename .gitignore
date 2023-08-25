@@ -6,7 +6,7 @@ __pycache__/
 # other extensions and dirs
 .idea
 *.iml
-dn757657_ta_features
+dn757657_features
 
 # C extensions
 *.so
